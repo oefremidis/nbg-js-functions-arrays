@@ -53,15 +53,38 @@
 //     console.log(y ** 5)
 // });
 
-function foo() {
+// function foo() {
 
-    function bar() {
-        return 1;
-    }
-    return bar
+//     function bar() {
+//         return 1;
+//     }
+//     return bar
+// }
+
+// console.log(foo())
+// const b = foo();
+// console.log(b());
+
+const withoutClosure = () => {
+    let counter = 0;
+    return ++counter;
 }
 
-console.log(foo())
-const b = foo();
-console.log(b());
+console.log(withoutClosure());
+console.log(withoutClosure());
+console.log(withoutClosure());
 
+
+const withClosure = () => {
+    let counter = 10;
+    return () => ++counter;
+}
+
+const increment = withClosure();
+console.log(increment);
+// console.log(withClosure());
+
+console.log(increment());
+console.log(increment());
+console.log(increment());
+console.log(increment());
