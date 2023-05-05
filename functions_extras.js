@@ -5,7 +5,11 @@
 
 // console.log(foo(5, 3));
 
+//-----------------------------------
 // Fucntion are first class citizen
+
+//------------------------
+// assigned to a variable
 
 // const bar = function (a, b){
 //     return a + b;
@@ -16,6 +20,11 @@
 
 // console.log(bar);
 // console.log(bar(5, 3));
+
+//------------------------
+// Higer Order Functions
+
+// passed as parameters... 
 
 // function foo(x){
 //     console.log(x);
@@ -33,7 +42,7 @@
 //     console.log(x);
 // }
 
-// function bar(funct) {
+// function bar(funct) {  // callback
 
 //     // after 5 weeks
 //     funct();
@@ -53,6 +62,9 @@
 //     console.log(y ** 5)
 // });
 
+
+//------------------------
+// returned by a function
 // function foo() {
 
 //     function bar() {
@@ -64,6 +76,11 @@
 // console.log(foo())
 // const b = foo();
 // console.log(b());
+
+
+//------------------------
+// Closures: counter retained after
+// its environment dies
 
 const withoutClosure = () => {
     let counter = 0;

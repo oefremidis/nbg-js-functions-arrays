@@ -1,4 +1,5 @@
-// // 'use strict'
+// // 'use strict' 
+// it makes "global" this undefined
 
 // console.log(this);
 // console.log(this === window);
@@ -10,7 +11,7 @@
 // foo();
 
 // function outer() {
-//     // 'use strict'
+//     // 'use strict'  // same here for functions
 //     console.log(this);
 
 //     function inner(){
@@ -22,6 +23,7 @@
 
 // outer();
 
+// this to the object that calls the method
 let color = {
     colorName: 'Red',
     // getColor: function(){}
@@ -32,7 +34,7 @@ let color = {
             console.log(this);
         }
 
-        foo();
+        foo();  // but not here
 
         return this.colorName;
     }
