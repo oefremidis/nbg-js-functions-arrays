@@ -93,6 +93,8 @@
 // ------------ Functional Programming -------------
 
 const colors = ['Red', 'Green', 'Blue'];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 // for(var value in colors){
 //     console.log(value)
@@ -112,7 +114,22 @@ const colors = ['Red', 'Green', 'Blue'];
 // const greaterThanFive = numbers.filter((num) => num > 5);
 // console.log(greaterThanFive)
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-numbers
-    .filter((num) => num > 5)
-    .forEach(value => console.log(value));
+// numbers
+//     .filter(num => num > 5)
+//     .forEach(value => console.log(value));
+
+// console.log(numbers.find(num => num % 2 == 0))
+// numbers.filter(num => num % 2 == 0).forEach(num => console.log(num));
+
+// map
+// const mapped = colors.map(value => value.toUpperCase());
+// console.log(mapped);
+
+// reduce
+// acc: value returned by the previous iteration
+// colors.map(value => value.toUpperCase()).forEach(val => console.log(val));
+const sum = [1, 2, 3, 4, 5].reduce((acc, val) => acc + val);
+console.log(sum);
+
+const total = numbers.reduce((t, v) => t + v, 1000);
+console.log(total);
